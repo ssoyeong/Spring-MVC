@@ -32,7 +32,9 @@ public class FormItemController {
     }
 
     @GetMapping("/add")
-    public String addForm() {
+    public String addForm(Model model) {
+
+        model.addAttribute("item", new Item());     // 빈 오브젝트라도 만들어서 뷰에 전달
         return "form/addForm";
     }
 
